@@ -58,7 +58,7 @@ public class MessagingConsumer {
 	public void consumeMessageHeader(String message) {
 		try {
 			Thread.sleep(30000);
-			System.out.println("Mensagem recebida Header com sucesso <" + message + ">");
+			System.out.println("Mensagem recebida HEADER com sucesso <" + message + ">");
 		} catch (InterruptedException e) {
 		}
 	}

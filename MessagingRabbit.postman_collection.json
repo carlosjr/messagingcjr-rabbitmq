@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "55c6c6ca-2703-4d96-8352-21b6ad393298",
+		"name": "MessagingRabbit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SendMessage DIrect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Hello Fila Direct!\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publish/send-direct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish",
+						"send-direct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendMessage Fanout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Hello fila fanout!\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publish/send-fanout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish",
+						"send-fanout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendMessage Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Hello Fila Topic!\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publish/send-topic/teste.gabigol.flamengo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish",
+						"send-topic",
+						"teste.gabigol.flamengo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendMessage Header",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Hello Fila Header!\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publish/send-header",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish",
+						"send-header"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
