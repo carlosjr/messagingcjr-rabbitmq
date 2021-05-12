@@ -3,6 +3,7 @@ package com.cjr.messagingrabbitmq;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class MessagingRabbitmqApplication {
 	
@@ -42,7 +43,7 @@ public class MessagingRabbitmqApplication {
 //	MessageListenerAdapter listenerAdapter(Receiver receiver) {
 //		return new MessageListenerAdapter(receiver, "receiveMessage");
 //	}
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MessagingRabbitmqApplication.class, args);
 	}

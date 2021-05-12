@@ -3,8 +3,6 @@ package com.cjr.messagingrabbitmq.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
