@@ -18,7 +18,8 @@ public class MessagingConsumer {
 	@RabbitListener(queues = MessagingDirectConfig.QUEUENAME)
 	public void consumeMessageDirect(Map<String, String> message) throws ConsumerException {
 		try {
-			Thread.sleep(5000);
+			System.out.println("Processou MSG"+message.get("id"));
+			Thread.sleep(10000);
 			if(message.get("id").contains("ERROR")) {
 				throw new ConsumerException();
 			}
