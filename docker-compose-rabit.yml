@@ -10,6 +10,9 @@ services:
       - "./data:/var/lib/rabbitmq/mnesia/"
     networks:
       - rabbitmq
+      
+  messagingcjr-pub-rabbitmq:
+  messagingcjr-consume-rabbitmq:
 
 networks:
   rabbitmq:

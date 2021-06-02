@@ -4,6 +4,7 @@
 
 ### Exemplos com as Exchange:
 - Direct
+- Direct (to other app)
 - Fanout
 - Topic
 - Headers
@@ -13,11 +14,18 @@
 
 Broker rodando em [http://localhost:15672/](url "http://localhost:15672/")  
 
-### Rodar a aplicação no eclise
+### Rodar a aplicação no eclise (messagingcjr-pub-rabbitmq)
 - botão direito no Arquivo MessagingRabbitmqApplication.java -> Run as... -> Run on Server
-- ou, na pasta do projeto: java -jar **build/libs/messagingcjr-rabbitmq-0.0.1-SNAPSHOT.jar**
+- ou, na pasta do projeto: java -jar **messagingcjr-pub-rabbitmq/build/libs/messagingcjr-pub-rabbitmq-0.0.1-SNAPSHOT.jar**]
 
 Projeto rodando em [http://localhost:8080](url "http://localhost:8080")  
+
+### Rodar a aplicação no eclise (messagingcjr-pub-rabbitmq)
+- botão direito no Arquivo MessagingRabbitmqConsumeApplication.java -> Run as... -> Run on Server
+- ou, na pasta do projeto: java -jar **messagingcjr-consume-rabbitmq/build/libs/messagingcjr-cosnume-rabbitmq-0.0.1-SNAPSHOT.jar**
+
+Projeto rodando em [http://localhost:8081](url "http://localhost:8081")  
+
 
 ### Postman
 - realizar testes com o Postman: https://www.getpostman.com/collections/80a0ba02b12dabc21662

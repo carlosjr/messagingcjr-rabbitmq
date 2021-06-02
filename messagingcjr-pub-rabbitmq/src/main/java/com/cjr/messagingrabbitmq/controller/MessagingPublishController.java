@@ -37,6 +37,16 @@ public class MessagingPublishController {
 		return "Envio para fila DIRECT com Sucesso!";
 	}
 	
+	@PostMapping(path = "/send-direct-to-consumer")
+	public String sendMessageDirectToConsumer(@RequestBody String message) {
+		System.out.println("Sending <" + message + ">");
+		Map<String, String> acMap = new HashMap<>();
+		acMap.put("id", message);
+		template.convertAndSend(MessagingDirectConfig.EXCHANGENAME, MessagingDirectConfig.ROUTINGKEYNAME_TOCONSUMER, acMap);
+		
+		return "Envio para fila DIRECT REMOTE CONSUMER com Sucesso!";
+	}
+	
 	@PostMapping(path = "/send-fanout")
 	public String sendMessageFanout(@RequestBody String message) {
 		System.out.println("Sending <" + message + ">");
