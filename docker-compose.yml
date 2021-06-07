@@ -1,0 +1,41 @@
+version: '3'
+services:
+  rabbitmq:
+    hostname: 'rabbit'
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - "/var/lib/rabbitmq:/var/lib/rabbitmq"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin 
+      - RABBITMQ_DEFAULT_PASS=admin123
+    networks:
+      - rabbitmq_network
+      
+  java-pub:
+    hostname: 'messaging-pub'
+    network_mode: host
+    build: 
+      context: .
+      dockerfile: "messagingcjr_pub.Dockerfile"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "rabbitmq"
+
+  java-consume:
+    hostname: 'messaging-consume'
+    network_mode: host
+    build: 
+      context: .
+      dockerfile: "messagingcjr_consume.Dockerfile"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - "java-pub"
+
+networks:
+  rabbitmq_network:
+    driver: bridge

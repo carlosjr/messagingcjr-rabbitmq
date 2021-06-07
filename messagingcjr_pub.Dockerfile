@@ -6,7 +6,7 @@ COPY messagingcjr-pub-rabbitmq/ /opt/code/
 
 WORKDIR /opt/code
 
-RUN ./gradlew clean build
+RUN ./gradlew build -x test
 
 EXPOSE 8080 8080
 

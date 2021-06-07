@@ -27,5 +27,11 @@ Projeto rodando em [http://localhost:8080](url "http://localhost:8080")
 Projeto rodando em [http://localhost:8081](url "http://localhost:8081")  
 
 
+### OU: Subindo com docker-compose
+- docker-compose build --no-cache
+- docker-compose up
+
 ### Postman
 - realizar testes com o Postman: https://www.getpostman.com/collections/80a0ba02b12dabc21662
+
+
